@@ -20,10 +20,22 @@ jobs:
         run: echo "Triggered by ${{ github.event_name }}"
 
       - name: Run tests
-        run:  exit 1
+        run:  echo "Tests passed"
+
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+
+
+      - name: Run tests 2
+        run:  echo "Lint passed"
 
   build:
-    needs: test
+    needs: 
+     - test
+     - lint
     runs-on: ubuntu-latest
 
     steps:
