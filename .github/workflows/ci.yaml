@@ -9,6 +9,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7 # use pre built checkout action here
+
       - name: Show environment
         run: |
           echo "Hello from GitHub Actions" # print something
@@ -17,4 +18,6 @@ jobs:
 
       - name: List files
         run: ls -la
-          
+
+      - name: Show index.html contents
+        run: cat src/index.html
