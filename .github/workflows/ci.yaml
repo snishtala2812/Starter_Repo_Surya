@@ -21,3 +21,15 @@ jobs:
 
       - name: Run tests
         run: echo "Tests passed"
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Build application
+        run: |
+          mkdir -p dist
+          cp src/index.html dist/index.html
