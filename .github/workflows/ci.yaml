@@ -33,3 +33,12 @@ jobs:
         run: |
           mkdir -p dist
           cp src/index.html dist/index.html
+
+          
+  deploy-demo:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy
+        run: echo "Deploying application"
