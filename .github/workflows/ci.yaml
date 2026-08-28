@@ -6,8 +6,8 @@ on: # trigger
   push:
     branches:
       - main
-    paths:
-      - 'src/*'
+    #paths:
+    #  - 'src/*'
 
 jobs:
   test:
@@ -51,6 +51,7 @@ jobs:
         with:
           name: web-dist
           path: dist/
+          retention-days: 7
 
   deploy-demo:
     needs: build
