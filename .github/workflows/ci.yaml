@@ -46,6 +46,12 @@ jobs:
           mkdir -p dist
           cp src/index.html dist/index.html
 
+      - name: Upload build output
+        uses: actions/upload-artifact@v7
+        with:
+          name: web-dist
+          path: dist/
+
           
   deploy-demo:
     needs: build
