@@ -52,5 +52,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
+      - name: Inspect files
+        run: ls -R .
+        
       - name: Deploy
         run: echo "Deploying application"
