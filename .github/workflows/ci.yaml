@@ -1,1 +1,15 @@
+name: CI
 
+on: # trigger
+  workflow_dispatch: # manual button to run this workflow
+
+jobs:
+  hello: # name of our job
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show environment
+        run: |
+          echo "Hello from GitHub Actions" # print something
+          uname -a # name of the OS
+          pwd # print the working directory / folder
