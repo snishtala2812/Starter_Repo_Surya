@@ -13,3 +13,7 @@ jobs:
           echo "Hello from GitHub Actions" # print something
           uname -a # name of the OS
           pwd # print the working directory / folder
+
+      - name: List files
+        run: ls -la
+          
