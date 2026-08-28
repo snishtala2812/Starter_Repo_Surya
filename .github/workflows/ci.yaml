@@ -20,7 +20,7 @@ jobs:
         run: echo "Triggered by ${{ github.event_name }}"
 
       - name: Run tests
-        run: echo "Tests passed"
+        run:  exit 1
 
   build:
     needs: test
