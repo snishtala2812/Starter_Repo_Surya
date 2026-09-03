@@ -6,8 +6,8 @@ on: # trigger
   push:
     branches:
       - main
-    #paths:
-    #  - 'src/*'
+    paths:
+      - 'src/*'
 
 jobs:
   test:
